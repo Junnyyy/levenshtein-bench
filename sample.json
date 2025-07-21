@@ -1,0 +1,34 @@
+[
+  [
+    "The Golden Gate Bridge is painted International Orange, a hue originally developed for use on aircraft. The intense color provides high visibility in the heavy fog that frequently shrouds the entrance to San Francisco Bay, while also complementing the surrounding landscape and Art Deco detailing.",
+    "Engineers selected International Orange for the Golden Gate Bridge because the vivid pigment ensures the span remains visible to ships even during thick fog banks. The choice also satisfied the architectural team, who felt bright colors would accentuate the bridge’s Art Deco lines rather than camouflage them in steel gray."
+  ],
+  [
+    "Micellar water cleanses the skin by suspending tiny surfactant molecules called micelles in soft water. When swiped across the face, the micelles surround makeup, sebum, and dirt, lifting impurities away without disrupting the skin’s acid mantle or requiring aggressive rubbing.",
+    "Skincare formulators rely on micelles in micellar water to trap and transport oil-soluble debris off the skin’s surface. The result is a gentle cleanser that removes mascara and sunscreen while leaving behind moisturizing glycerin, so even sensitive complexions avoid the tightness caused by foaming detergents."
+  ],
+  [
+    "Lower Manhattan’s crooked street grid dates back to the 17th-century Dutch settlement of New Amsterdam, which grew organically along the shoreline. When the Commissioners’ Plan of 1811 later imposed a rigid numbered grid on the rest of Manhattan, the southern tip retained its irregular lanes like Wall Street and Pearl Street, creating today’s asphalt labyrinth.",
+    "Because the Dutch laid out New Amsterdam without centralized planning, the southern end of Manhattan still defies the clean symmetry of the uptown grid. Visitors walking from Canal Street suddenly encounter curving alleys and angled junctions, a reminder that colonial trade routes and cow paths trumped future city-planning ideals."
+  ],
+  [
+    "Modern skyscrapers incorporate reinforced concrete cores, fire-rated elevator lobbies, and positive-pressure stairwells to isolate smoke during a blaze. After the 1911 Triangle Shirtwaist Factory fire and the collapses witnessed on 9/11, codes now demand automatic sprinklers, redundant water risers, and refuge floors every 20 stories.",
+    "High-rise building codes evolved after notorious fires prompted regulators to mandate compartmentalization and firefighter lifts. Today’s towers use intumescent coatings, two-hour firewall assemblies, and fail-safe pressurization fans to keep evacuation paths clear even when sprinklers activate on multiple floors."
+  ],
+  [
+    "Streaming platforms like Netflix and YouTube employ adaptive bitrate algorithms that probe a viewer’s connection every few seconds. If bandwidth dips, the server delivers a lower-resolution video segment to prevent the dreaded buffering wheel, then ramps quality back up once throughput stabilizes.",
+    "Adaptive bitrate streaming constantly measures client-side download speed, queue length, and frame loss. The player requests chunked video files in 240p, 480p, or 4K as conditions allow, ensuring seamless playback on everything from gigabit fiber to crowded mobile networks during rush hour."
+  ],
+  [
+    "Electric-vehicle batteries lose efficiency in cold weather because lithium-ion chemistry slows as temperatures drop. Manufacturers combat this with internal heating mats and preconditioning routines that warm the pack before fast charging, preserving both driving range and charging speed on frigid mornings.",
+    "Some automakers are experimenting with battery-swap stations where depleted packs slide out and charged units slide in within minutes. Though infrastructure-intensive, swapping eliminates wait times and could standardize battery maintenance while decoupling vehicle cost from expensive energy storage modules."
+  ],
+  [
+    "Astrophysicists study neutrinos because these nearly massless particles pass through ordinary matter almost undisturbed, offering clues about supernovae and the structure of the early universe.",
+    "Flipping pancakes quickly over medium heat ensures even browning and prevents the center from remaining raw while the edges burn."
+  ],
+  [
+    "Deep-sea submersibles rely on titanium spheres to withstand the crushing pressures thousands of meters below the ocean surface, enabling researchers to explore hydrothermal vents and ancient shipwrecks.",
+    "Keeping a smartphone between twenty and eighty percent charge can slow battery degradation by reducing stress on lithium-ion cells."
+  ]
+]
