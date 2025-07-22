@@ -1,5 +1,6 @@
 import { distance as fastestDistance } from "fastest-levenshtein";
 import levenshtein from "js-levenshtein";
+import { distance as customDistance } from "@levenshtein";
 
 type Color = "reset" | "bold" | "dim" | "red" | "green" | "cyan";
 const C: Record<Color, string> = {
@@ -64,6 +65,10 @@ const jsTimes = runBenchmark("js-levenshtein", () => {
   for (const [a, b] of pairs) levenshtein(a, b);
 });
 
+const customTimes = runBenchmark("custom-levenshtein", () => {
+  for (const [a, b] of pairs) customDistance(a, b);
+});
+
 const average = (values: number[]): number =>
   values.reduce((sum, v) => sum + v, 0) / values.length;
 
@@ -82,19 +87,40 @@ const format = (name: string, times: number[], faster: boolean): string => {
 
 const avgFast = average(fastestTimes);
 const avgJs = average(jsTimes);
+const avgCustom = average(customTimes);
 
 console.log("\n" + colour("Benchmark", "bold"));
-console.log(format("fastest-levenshtein", fastestTimes, avgFast < avgJs));
-console.log(format("js-levenshtein", jsTimes, avgJs < avgFast));
-
-const speedRatio = avgJs / avgFast;
-const ratioStr = colour(
-  `${speedRatio.toFixed(2)}x`,
-  speedRatio > 1 ? "green" : "red",
-  "bold"
+console.log(
+  format(
+    "fastest-levenshtein",
+    fastestTimes,
+    avgFast < Math.min(avgJs, avgCustom)
+  )
 );
 console.log(
-  colour("\nfastest-levenshtein is ", "bold") +
-    ratioStr +
-    (speedRatio > 1 ? " faster" : " slower")
+  format("js-levenshtein", jsTimes, avgJs < Math.min(avgFast, avgCustom))
 );
+console.log(
+  format(
+    "custom-levenshtein",
+    customTimes,
+    avgCustom < Math.min(avgFast, avgJs)
+  )
+);
+
+const ratios: [string, number][] = [
+  ["js-levenshtein", avgJs / avgFast],
+  ["custom-levenshtein", avgCustom / avgFast],
+];
+
+console.log(colour("\nfastest-levenshtein vs others:", "bold"));
+ratios.forEach(([name, r]) => {
+  const ratioColored = colour(
+    `${r.toFixed(2)}x`,
+    r > 1 ? "green" : "red",
+    "bold"
+  );
+  console.log(
+    colour(`${name}: `, "bold") + ratioColored + (r > 1 ? " faster" : " slower")
+  );
+});
