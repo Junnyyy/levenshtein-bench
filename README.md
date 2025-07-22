@@ -1,9 +1,10 @@
 # Levenshtein Benchmark
 
-A tiny benchmark comparing two popular TypeScript implementations of the Levenshtein distance algorithm:
+A tiny benchmark comparing three TypeScript implementations of the Levenshtein distance algorithm:
 
 - [`fastest-levenshtein`](https://github.com/ka-weihe/fastest-levenshtein)
 - [`js-levenshtein`](https://github.com/gustf/js-levenshtein)
+- **Custom implementation** (`@levenshtein` – see `levenshtein.ts`)
 
 The script measures how long each library takes to compute the distance for many randomly-chosen sentence pairs. Results are averaged across multiple runs so you can easily see which library is faster on your machine.
 
@@ -23,6 +24,13 @@ bun run bench
 
 # Or provide your own JSON file containing an array of string pairs
 bun run bench path/to/your-sample.json
+```
+
+### Running tests
+
+```bash
+# Execute the test suite (compares @levenshtein against fastest-levenshtein)
+bun test
 ```
 
 ### Dataset format
@@ -61,19 +69,28 @@ run 8: 71.29% (144)
 
 Benchmark
 fastest-levenshtein
-  run 1: 1514.72 ms
-  run 2: 1401.63 ms
-  run 3: 1330.28 ms
-  run 4: 1322.65 ms
-  run 5: 1314.35 ms
-  avg: 1376.73 ms
+  run 1: 1498.58 ms
+  run 2: 1470.97 ms
+  run 3: 1423.82 ms
+  run 4: 1416.01 ms
+  run 5: 1397.42 ms
+  avg: 1441.36 ms
 js-levenshtein
-  run 1: 8686.29 ms
-  run 2: 8681.08 ms
-  run 3: 8638.34 ms
-  run 4: 8643.75 ms
-  run 5: 8702.73 ms
-  avg: 8670.44 ms
+  run 1: 8961.40 ms
+  run 2: 8902.54 ms
+  run 3: 8918.72 ms
+  run 4: 8916.83 ms
+  run 5: 8926.73 ms
+  avg: 8925.24 ms
+custom-levenshtein
+  run 1: 12052.00 ms
+  run 2: 12224.51 ms
+  run 3: 12150.78 ms
+  run 4: 12354.10 ms
+  run 5: 12260.99 ms
+  avg: 12208.48 ms
 
-fastest-levenshtein is 6.30x faster
+fastest-levenshtein vs others:
+js-levenshtein: 6.19x faster
+custom-levenshtein: 8.47x faster
 ```
