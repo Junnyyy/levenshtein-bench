@@ -4,7 +4,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "bench": "bun run index.ts"
+    "bench": "bun run index.ts",
+    "test": "bun test"
   },
   "devDependencies": {
     "@types/bun": "latest"
